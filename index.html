@@ -1,1 +1,46 @@
-<!-- placeholder -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Concern Playground</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Parent Concern Playground</h1>
+  </header>
+
+  <section class="filters" aria-label="Filters">
+    <div class="filter-group">
+      <label for="stageFilter">Stage</label>
+      <select id="stageFilter" aria-label="Stage filter">
+        <option value="All">All</option>
+        <option value="New">New</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Escalated">Escalated</option>
+        <option value="Resolved">Resolved</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="severityFilter">Severity</label>
+      <select id="severityFilter" aria-label="Severity filter">
+        <option value="All">All</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+    </div>
+
+    <div class="filter-group search-group">
+      <label for="searchInput">Search</label>
+      <input id="searchInput" type="text" placeholder="Search parent or student" aria-label="Search by parent or student">
+    </div>
+  </section>
+
+  <main id="concernContainer" class="concern-container" aria-live="polite"></main>
+
+  <script src="app.js"></script>
+</body>
+</html>
